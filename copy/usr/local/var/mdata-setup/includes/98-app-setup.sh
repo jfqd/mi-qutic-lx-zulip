@@ -3,7 +3,7 @@ cd /root
 # EMAIL=$(/native/usr/sbin/mdata-get zulip_admin_email)
 # HOST=$(/native/usr/sbin/mdata-get zulip_external_host)
 
-# ./zulip-server-*/scripts/setup/install --self-signed-cert --email="${EMAIL}" --hostname="$(hostname)"
+# ./zulip-server-*/scripts/setup/install --self-signed-cert --email="${EMAIL}" --hostname="${HOST}"
 
 # https://zulip.readthedocs.io/en/stable/production/email.html
 # /etc/zulip/settings.py

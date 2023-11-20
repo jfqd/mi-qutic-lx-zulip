@@ -35,8 +35,13 @@ systemctl disable ssh
 
 echo "* Download zulip"
 cd /root
+cat "${ZULIP_VERSION}" > version
 curl -fLO "https://download.qutic.com/src/zulip/zulip-server-${ZULIP_VERSION}.tar.gz"
 tar -xf zulip-server-${ZULIP_VERSION}.tar.gz
+rm -rf zulip-server-${ZULIP_VERSION}.tar.gz
+sed -i \
+    -e "s#GOCACHE=/tmp/gocache#GOCACHE=/var/tmp/gocache#" \
+    ./zulip-server-${ZULIP_VERSION}/puppet/zulip/manifests/smokescreen.pp
 
 echo "* Create bash-history"
 cat >> /root/.bash_history << EOF
