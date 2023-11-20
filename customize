@@ -11,14 +11,14 @@ ZULIP_VERSION="7.5"
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export DEBIAN_FRONTEND=noninteractive
 
+echo "* Setup language env"
+locale-gen en_US.utf8 || true
+
 echo "* Get latest"
-add-apt-repository universe
+# add-apt-repository universe
 apt-get update
 apt-get -y upgrade
 apt-get -y dist-upgrade
-
-echo "* Setup language env"
-locale-gen en_US.utf8 || true
 
 echo "* Disable and remove rpcbind"
 apt-get -y remove rpcbind || true
