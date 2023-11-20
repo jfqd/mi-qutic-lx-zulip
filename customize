@@ -35,7 +35,7 @@ systemctl disable ssh
 
 echo "* Download zulip"
 cd /root
-cat "${ZULIP_VERSION}" > version
+echo "${ZULIP_VERSION}" > version
 curl -fLO "https://download.qutic.com/src/zulip/zulip-server-${ZULIP_VERSION}.tar.gz"
 tar -xf zulip-server-${ZULIP_VERSION}.tar.gz
 rm -rf zulip-server-${ZULIP_VERSION}.tar.gz
