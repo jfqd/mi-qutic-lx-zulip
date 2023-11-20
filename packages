@@ -1,0 +1,14 @@
+net-tools
+curl
+nginx
+screen
+build-essential
+git
+gcc
+g++
+make
+dirmngr
+unzip
+jq
+htop
+apache2-utils

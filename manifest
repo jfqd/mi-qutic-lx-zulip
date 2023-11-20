@@ -1,0 +1,8 @@
+name="qutic-zulip"
+organization="qutic development"
+brand="Instance"
+version="7.5.0"
+description="qutic zulip image"
+homepage="https://github.com/jfqd/mi-qutic-lx-zulip"
+users="root admin"
+base="64813eee-734d-11ee-bcf0-db475b509861"
